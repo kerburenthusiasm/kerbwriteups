@@ -6,10 +6,9 @@ author: Kerburenthusiasm
 excerpt: "A detailed walkthrough of the White Rabbit HTB challenge"
 tags: [N8N, Restic, SQLi, SQLMap, Restic-Server, John, Reverse-Engineering, Ghidra]
 ---
-# White Rabbit - HTB Writeup
-## Machine Information
+# Machine Information
 - **Difficulty:** Insane
 - **OS:** Linux
 
-## Walkthrough
+# Walkthrough
 Coming soon..
