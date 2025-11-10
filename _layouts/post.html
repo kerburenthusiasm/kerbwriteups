@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  
+  <div class="post-meta">
+    <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+    {% if page.author %}<span class="author">by {{ page.author }}</span>{% endif %}
+  </div>
+
+  {% if page.tags %}
+    <div class="tags">
+      <strong>Tags:</strong>
+      {% for tag in page.tags %}
+        <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <!-- Previous/Next Post Navigation -->
+  <div class="post-navigation">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="prev-post">
+        ← Previous: {{ page.previous.title }}
+      </a>
+    {% endif %}
+    
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="next-post">
+        Next: {{ page.next.title }} →
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- Related Posts by Tag -->
+  {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+  {% assign related = "" | split: "" %}
+  
+  {% for post in related_posts %}
+    {% for tag in page.tags %}
+      {% if post.tags contains tag %}
+        {% unless related contains post %}
+          {% assign related = related | push: post %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if related.size > 0 %}
+    <div class="related-posts">
+      <h3>Related Writeups</h3>
+      <ul>
+      {% for post in related limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <!-- Back to Home -->
+  <div class="back-to-home">
+    <a href="{{ '/' | relative_url }}">← Back to all writeups</a>
+  </div>
+</article>
