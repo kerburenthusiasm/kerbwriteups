@@ -1,11 +1,11 @@
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: pages-themes/primer@v0.6.0
 plugins:
-  - jekyll-remote-theme
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 
 # Site Settings
 title: Kerb Writeups
 author: Kerburenthusiasm
-description: CTF Writeups and Security Research
+description: A blog to host my CTFs writeups (mostly HTBs) and other security related interests.
 baseurl: /kerbwriteups
 url: "https://Kerburenthusiasm.github.io"
 
