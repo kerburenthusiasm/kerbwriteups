@@ -1,28 +1,17 @@
 ---
 layout: default
+title: "Home"
 ---
 
-# Kerb Writeups
+# kerbwriteups
 
 I'm a security analyst with a focus on offensive security and vulnerability research. Through this blog, I share detailed writeups from CTF competitions and security research I find interesting.
 
----
+## CTF Writeups
+- [HTB & other writeups](/ctf/)
 
-## Latest Writeups
+## Others
+- [Blog posts, thoughts, etc.](/others/)
 
-{% if site.posts.size > 0 %}
-{% for post in site.posts %}
-### [{{ post.title }}]({{ post.url | relative_url }})
-**{{ post.date | date: "%B %d, %Y" }}**
-
-{% if post.excerpt %}
-{{ post.excerpt }}
-{% endif %}
-
-[Read full writeup →]({{ post.url | relative_url }})
-
----
-{% endfor %}
-{% else %}
-<p>No posts yet. Check back soon!</p>
-{% endif %}
+## Tools
+- [Scripts and utilities](/tools/)
