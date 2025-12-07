@@ -21,8 +21,8 @@ tags:
 excerpt: "Full walkthrough of the MonitorsFour HackTheBox machine."
 ---
 # Machine Information
-- **Difficulty:** Medium
+- **Difficulty:** Easy
 - **OS:** Windows
-- **Domain:** breach.vl
+- **Domain:** MonitorsFour
 
 Coming Soon...
