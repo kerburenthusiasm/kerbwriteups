@@ -1,31 +1,33 @@
 remote_theme: pages-themes/primer@v0.6.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
 
-# Site Settings
+plugins:
+  - jekyll-remote-theme
+  - jekyll-github-metadata
+
 title: Kerb Writeups
 author: Kerburenthusiasm
-description: A blog to host my CTFs writeups (mostly HTBs) and other security related interests.
-baseurl: /kerbwriteups
-url: "https://Kerburenthusiasm.github.io"
+description: A blog to host my CTF writeups (mostly HTBs) and other security-related interests.
 
-# Jekyll Settings
+url: "https://kerburenthusiasm.github.io"
+baseurl: "/kerbwriteups"
+
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-# Exclude from processing
-exclude:
-  - .github/
-  - vendor
-
-# Set up collections
 collections:
   ctfs:
     output: true
-    permalink: /ctf/:platform/:name/
+    permalink: /ctf/:title/
   others:
     output: true
     permalink: /others/:title/
   tools:
     output: true
     permalink: /tools/:title/
+
+exclude:
+  - .github/
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

@@ -1,16 +1,16 @@
 ---
-layout: default
-title: "Tools"
+layout: page
+title: Tools
 permalink: /tools/
 ---
 
 # Tools
 
 <ul>
-  {% for post in site.tools %}
+  {% for t in site.tools %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small> — {{ post.date | date: "%Y-%m-%d" }}</small>
+      <a href="{{ t.url | relative_url }}">{{ t.title }}</a>
+      <small> — {{ t.date | date: "%Y-%m-%d" }}</small>
     </li>
   {% endfor %}
 </ul>

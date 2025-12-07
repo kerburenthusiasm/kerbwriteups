@@ -1,16 +1,16 @@
 ---
-layout: default
-title: "Others"
+layout: page
+title: Others
 permalink: /others/
 ---
 
 # Others
 
 <ul>
-  {% for post in site.others %}
+  {% for p in site.others %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small> — {{ post.date | date: "%Y-%m-%d" }}</small>
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      <small> — {{ p.date | date: "%Y-%m-%d" }}</small>
     </li>
   {% endfor %}
 </ul>

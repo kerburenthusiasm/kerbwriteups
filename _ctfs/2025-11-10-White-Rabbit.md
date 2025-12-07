@@ -1,12 +1,27 @@
 ---
-title: White Rabbit HTB Writeup
-platform: "htb"
-layout: ctf
-category: "CTF"
+layout: page
+title: "White Rabbit (HTB) – CTF Writeup"
 date: 2025-11-10
-author: Kerburenthusiasm
-excerpt: "A detailed walkthrough of the White Rabbit HTB challenge"
-tags: [N8N, Restic, SQLi, SQLMap, Restic-Server, John, Reverse-Engineering, Ghidra]
+
+author: "Kerburenthusiasm"
+
+# Collections / taxonomy
+categories:
+  - CTF
+  - HackTheBox
+platform: "htb"
+
+tags:
+  - n8n
+  - Restic
+  - SQLi
+  - sqlmap
+  - Restic-Server
+  - John
+  - Reverse Engineering
+  - Ghidra
+
+excerpt: "Full walkthrough of the White Rabbit HackTheBox machine, covering enumeration, SQL injection exploitation, Restic backup abuse, and privilege escalation."
 ---
 
 # Machine Information
