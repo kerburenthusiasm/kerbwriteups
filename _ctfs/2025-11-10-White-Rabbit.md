@@ -209,15 +209,14 @@ SQLMap identified that the SQLi was vulnerable to:
 - Error-based SQLi
 - Time-based blind SQLi
 
-Additionally, it extracted out the following information:
-| ID  | Date                | Command                                                                         |
-| :-- | :------------------ | :------------------------------------------------------------------------------ |
-| 1   | 2024-08-30 10:44:01 | `uname -a`                                                                      |
-| 2   | 2024-08-30 11:58:05 | `restic init --repo rest:http://75951e6ff.whiterabbit.htb`                      |
-| 3   | 2024-08-30 11:58:36 | `echo <masked_password> > .restic_passwd`                        |
-| 4   | 2024-08-30 11:59:02 | `rm -rf .bash_history`                                                          |
-| 5   | 2024-08-30 11:59:47 | `#thatwasclose`                                                                 |
-| 6   | 2024-08-30 14:40:42 | `cd /home/neo/ && /opt/neo-password-generator/neo-password-generator \| passwd` |
+| ID  | Date                | Command                                                                                      |
+| :-- | :------------------ | :------------------------------------------------------------------------------------------- |
+| 1   | 2024-08-30 10:44:01 | `uname -a`                                                                                   |
+| 2   | 2024-08-30 11:58:05 | `restic init --repo rest:http://75951e6ff.whiterabbit.htb`                                   |
+| 3   | 2024-08-30 11:58:36 | `echo &lt;masked_password&gt; > .restic_passwd`                                              |
+| 4   | 2024-08-30 11:59:02 | `rm -rf .bash_history`                                                                       |
+| 5   | 2024-08-30 11:59:47 | `#thatwasclose`                                                                              |
+| 6   | 2024-08-30 14:40:42 | `cd /home/neo/ && /opt/neo-password-generator/neo-password-generator &#124; passwd`         |
 
 It appears that system commands are stored on the database. The reason was mentioned in the wiki:
 > We will use the database for other projects related to phishing as well. As soon we get to production state, we will separate the data
