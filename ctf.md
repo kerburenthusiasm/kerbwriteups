@@ -7,24 +7,28 @@ permalink: /ctf/
 # CTF Writeups
 
 ## HTB
+
 <ul>
-  {% for post in site.ctf %}
-    {% if post.platform == "htb" %}
+  {% for c in site.ctfs %}
+    {% if c.platform == "htb" %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small> — {{ post.date | date: "%Y-%m-%d" }}</small>
+        <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+        <small> — {{ c.date | date: "%Y-%m-%d" }}</small>
       </li>
     {% endif %}
   {% endfor %}
 </ul>
 
+{% assign other_ctf = site.ctfs | where_exp: "c", "c.platform != 'htb'" %}
+{% if other_ctf.size > 0 %}
 ## Other Platforms
+
 <ul>
-  {% assign other_ctf = site.ctf | where_exp: "post", "post.platform != 'htb'" %}
-  {% for post in other_ctf %}
+  {% for c in other_ctf %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small> — {{ post.date | date: "%Y-%m-%d" }} ({{ post.platform | upcase }})</small>
+      <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+      <small> — {{ c.date | date: "%Y-%m-%d" }} ({{ c.platform | upcase }})</small>
     </li>
   {% endfor %}
 </ul>
+{% endif %}
