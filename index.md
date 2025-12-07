@@ -9,12 +9,12 @@ I’m a security analyst with a focus on offensive security and vulnerability re
 
 ## CTF Writeups
 
-- [HTB & other writeups]({{ '/ctf/' | relative_url }})
+- [CTFs Writeup]({{ '/ctf/' | relative_url }})
 
 ## Others
 
-- [Blog posts, thoughts, etc.]({{ '/others/' | relative_url }})
+- [Other stuffs]({{ '/others/' | relative_url }})
 
 ## Tools
 
-- [Scripts and utilities]({{ '/tools/' | relative_url }})
+- [CTF-related tools]({{ '/tools/' | relative_url }})
