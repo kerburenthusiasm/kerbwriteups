@@ -1,3 +1,16 @@
+---
+layout: page
+title: "Reflective Powershell"
+date: 2025-12-8
+
+author: "Kerburenthusiasm"
+
+tags:
+  - OSEP
+
+excerpt: "Understanding reflective powershell techniques, why and how."
+---
+
 # Add-Type
 By specifying `Add-Type` in PowerShell, it will **compile and create** an object. This can be used to define classes, enums, structs, and even `P/Invoke` signatures.
 
