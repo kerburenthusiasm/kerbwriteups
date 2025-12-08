@@ -293,9 +293,11 @@ $domain = [AppDomain]::CurrentDomain
 $myAsmBuilder = $domain.DefineDynamicAssembly($customAssembly, [System.Reflection.Emit.AssemblyBuilderAccess]::Run)
 ```
 
-|Name|Value|Description|
-|---|---|---|
-|Run|1|The dynamic assembly can be executed, but not saved.|
+Name | Value | Description
+---- | ----- | -----------
+Run  | 1     | The dynamic assembly can be executed, but not saved.
+
+
 **2. Defining a module for assembly**
 A module can now be defined in the created assembly using `DefineDynamicModule`
 ``` csharp
