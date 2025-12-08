@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "MonitorsFour (HTB) – CTF Writeup"
-date: 2025-11-19
+date: 2025-12-7
 
 author: "Kerburenthusiasm"
 
